@@ -1,0 +1,77 @@
+<!-- {"path": "musicvault-casezero/", "title": "Case Zero: The Varnell Vault", "description": "Check your answer to Case Zero from the back of ALL HANDS, get the full walkthrough, and receive your letter of reference.", "robots": "noindex,follow", "cz": {"answer": 8, "label": "Line 08", "list": "musicvault-casezero"}} -->
+<section class="cz-hero">
+  <div class="wrap narrow stack">
+    <p class="eyebrow">Case Zero &middot; printed at the back of ALL HANDS</p>
+    <h1 class="display" style="font-size:clamp(2.2rem,1.4rem + 3vw,3.8rem)">The Varnell Vault, March 1969</h1>
+    <p class="lede muted">The man in Cleveland wrote you a reference. It's how Hollis found you. Tell us the name on your slip and we'll send it, along with the answer.</p>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap cz-grid">
+    <div class="prose stack">
+      <p>Write the name you put on your hiring slip. The letter is typed out to that name, and a copy comes to your inbox.</p>
+      <p>Your line number is optional. Put it in and we'll tell you whether you reached the only conclusion, or where it turned.</p>
+      <p class="muted small">Haven't solved it yet? Case Zero is at the back of <a href="{{L:books/all-hands/}}">ALL HANDS</a>: twelve lines, four papers, about fifteen minutes. Come back when you have one line left.</p>
+    </div>
+    <form class="paper form-card" id="cz-form" novalidate>
+      <p class="slip-title type">VARNELL RECORDS &middot; VAULT &middot; SHELF CHECK</p>
+      <div class="field">
+        <label for="cz-name">Your name, as on your slip</label>
+        <input id="cz-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="cz-email">Email address</label>
+        <input id="cz-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="cz-line">The line you have left (optional)</label>
+        <input id="cz-line" name="line" type="text" inputmode="numeric" placeholder="Line __" maxlength="4">
+      </div>
+      <div class="hp" aria-hidden="true"><label for="cz-website">Leave this empty</label><input id="cz-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Check my answer</button>
+      <p class="form-msg" aria-live="polite"></p>
+      <p class="fine">You'll also get one letter when THE MUSIC VAULT opens. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+
+<section id="cz-result" class="result" hidden aria-live="polite" style="padding-top:0">
+  <div class="wrap stack" style="display:grid;gap:clamp(28px,4vw,48px)">
+    <p class="verdict-big" id="cz-verdict"></p>
+    <div class="walk" id="cz-walk"></div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:14px">Your letter of reference</p>
+      <div class="paper letter" id="cz-letter"></div>
+    </div>
+    <div class="print-row no-print">
+      <button class="btn ghost" type="button" id="cz-print">Print the letter</button>
+      <a class="btn" href="{{L:books/the-music-vault/}}">Next: THE MUSIC VAULT</a>
+    </div>
+  </div>
+</section>
+
+<template id="cz-walk">
+<p class="answer-line"><b>Line 08: Ben Oakley, &ldquo;Wrong Side of Friday,&rdquo; Quinvy, 13 March 1969.</b></p>
+<h3>1. The reel</h3>
+<p>The receiving slip says a 7-inch reel with 1,200 feet on it. Strike every line where the reel or the feet don't match: lines 1, 6 and 12 are 10&frac12;-inch reels, line 4 is 600 feet, line 10 is 1,800 feet.<span class="left">Seven left: 2, 3, 5, 7, 8, 9, 11.</span></p>
+<h3>2. The shipping docket</h3>
+<p>A reel can only come back from Nashville if it went there. Lines 2 and 7 were never shipped.<span class="left">Five left: 3, 5, 8, 9, 11.</span></p>
+<h3>3. Hollis's shelf check</h3>
+<p>Lines 3, 5 and 11 are back on the shelf, boxed, with their cards in. They are home. But read line 8 again: BOX ONLY, reel out. Oakley's box came home. His reel didn't.<span class="left">Two left: 8 and 9.</span></p>
+<h3>4. Nashville's letter</h3>
+<p>Earline Tubb's 17 March reel went back separately, boxed, with its card.<span class="left">One left: line 8.</span></p>
+<p>Nothing in the letter rules anyone out by date: &ldquo;last week&rdquo; and &ldquo;the 21st&rdquo; only say where the loose reel and the Tubb reel went.</p>
+<p>If you ended with no lines, you struck Oakley on the shelf check. Hollis was a careful man, and he wrote down exactly what he found: a box with nothing in it, and a reel on his desk with nothing on it.</p>
+<p><i>The Music Vault</i> opens in the same vault, five years later, with a box that has no name at all.</p>
+</template>
+
+<template id="cz-letter">
+<div class="lh"><b>BRANDT STEAMSHIP COMPANY</b>MARINE DEPARTMENT &middot; RECORDS<br>Wilshire Building, West Sixth Street, Cleveland, Ohio</div>
+<p class="date">15 November 1963</p>
+<p>To whom it may concern:</p>
+<p>{NAME} sat across my desk for twelve days this autumn, on a casual engagement, cash daily, checking my sums on a file of fifty years' standing.</p>
+<p>I have kept this company's records for thirty-three years. In that time I have not had a second pair of hands I would trust further. {NAME} checked every total I wrote and would not let me sign one that had not been proved, and on the one night I got it wrong, said so.</p>
+<p>The company has been sold and my department is closed, so I have no position to offer. I can say this much. If you have a column that has to be right, and a man's name at the bottom of it, give it to {NAME}.</p>
+<p class="sig">Yours faithfully,<span class="hand">&nbsp;</span>Keeper of Records, Marine Department</p>
+</template>

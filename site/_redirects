@@ -1,0 +1,13 @@
+# Netlify / Cloudflare Pages short links. Printed URLs in the books must never break.
+/allhands            /books/all-hands/          301
+/all-hands           /books/all-hands/          301
+/musicvault          /books/the-music-vault/    301
+/music-vault         /books/the-music-vault/    301
+/the-music-vault     /books/the-music-vault/    301
+/casezero            /#case-zero                301
+/case-zero           /#case-zero                301
+/sheets              /#sheets                   301
+/MusicVault-CaseZero /musicvault-casezero/      301
+/SugarCamp-CaseZero  /sugarcamp-casezero/       301
+/music-vault-casezero /musicvault-casezero/     301
+/sugar-camp-casezero  /sugarcamp-casezero/      301

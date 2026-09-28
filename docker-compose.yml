@@ -1,0 +1,28 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: theonlyconclusion-web
+    restart: unless-stopped
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - coolify
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.middlewares.theonlyconclusion-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.theonlyconclusion-redirect.redirectscheme.permanent=true"
+      - "traefik.http.routers.theonlyconclusion-http.entryPoints=http"
+      - "traefik.http.routers.theonlyconclusion-http.middlewares=theonlyconclusion-redirect"
+      - "traefik.http.routers.theonlyconclusion-http.rule=Host(`theonlyconclusion.com`) || Host(`www.theonlyconclusion.com`)"
+      - "traefik.http.routers.theonlyconclusion-http.service=theonlyconclusion"
+      - "traefik.http.routers.theonlyconclusion.entryPoints=https"
+      - "traefik.http.routers.theonlyconclusion.rule=Host(`theonlyconclusion.com`) || Host(`www.theonlyconclusion.com`)"
+      - "traefik.http.routers.theonlyconclusion.service=theonlyconclusion"
+      - "traefik.http.routers.theonlyconclusion.tls=true"
+      - "traefik.http.routers.theonlyconclusion.tls.certresolver=letsencrypt"
+      - "traefik.http.services.theonlyconclusion.loadbalancer.server.port=80"
+
+networks:
+  coolify:
+    external: true

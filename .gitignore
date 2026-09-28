@@ -1,0 +1,5 @@
+_to_delete/
+*.tar.gz
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,99 @@
+<!-- {"path": "sugarcamp-casezero/", "title": "Case Zero: The Sugar Camp", "description": "Check your answer to Case Zero from the back of THE MUSIC VAULT, get the full walkthrough, and read Carl Lindqvist's reply.", "robots": "noindex,follow", "cz": {"answer": 7, "label": "Line 7", "list": "sugarcamp-casezero"}} -->
+<section class="cz-hero">
+  <div class="wrap narrow stack">
+    <p class="eyebrow">Case Zero &middot; printed at the back of THE MUSIC VAULT</p>
+    <h1 class="display" style="font-size:clamp(2.2rem,1.4rem + 3vw,3.8rem)">The Sugar Camp, October 1975</h1>
+    <p class="lede muted">Carl wrote back after the Navy came. Tell us the name he wrote to and we'll send it, along with the answer.</p>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap cz-grid">
+    <div class="prose stack">
+      <p>Write the name you put on the Vault's letter, after &ldquo;Dear.&rdquo; Carl's reply is typed out to that name, and a copy comes to your inbox.</p>
+      <p>Your line number is optional. Put it in and we'll tell you whether you found the job, or where it turned.</p>
+      <p class="muted small">Haven't solved it yet? Case Zero is at the back of <a href="{{L:books/the-music-vault/}}">THE MUSIC VAULT</a>: twelve jobs, four papers, about fifteen minutes. Come back when you have one line left.</p>
+    </div>
+    <form class="paper form-card" id="cz-form" novalidate>
+      <p class="slip-title type">LINDQVIST TOOL &amp; WIRE CO. &middot; DAYTON, OHIO</p>
+      <div class="field">
+        <label for="cz-name">Your name, as Carl wrote it</label>
+        <input id="cz-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="cz-email">Email address</label>
+        <input id="cz-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="cz-line">The line you have left (optional)</label>
+        <input id="cz-line" name="line" type="text" inputmode="numeric" placeholder="Line __" maxlength="4">
+      </div>
+      <div class="hp" aria-hidden="true"><label for="cz-website">Leave this empty</label><input id="cz-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Check my answer</button>
+      <p class="form-msg" aria-live="polite"></p>
+      <p class="fine">You'll also get one letter when THE SUGAR CAMP opens. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+
+<section id="cz-result" class="result" hidden aria-live="polite" style="padding-top:0">
+  <div class="wrap" style="display:grid;gap:clamp(28px,4vw,48px)">
+    <p class="verdict-big" id="cz-verdict"></p>
+    <div class="walk" id="cz-walk"></div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:14px">Carl's reply</p>
+      <div class="paper letter" id="cz-letter"></div>
+    </div>
+    <div class="print-row no-print">
+      <button class="btn ghost" type="button" id="cz-print">Print the letter</button>
+      <a class="btn" href="{{L:#signup}}">Hear when THE SUGAR CAMP opens</a>
+    </div>
+  </div>
+</section>
+
+<template id="cz-walk">
+<p class="answer-line"><b>Line 7: job 4329, &ldquo;Counter wheel assembly,&rdquo; opened 19 October 1943.</b></p>
+<h3>1. The Navy's letter</h3>
+<p>The job was for N.C.R. and ordered on or after 1 October 1943. Strike every job for another customer, and every job opened before 1 October: lines 1, 2, 3, 4, 8 and 10.<span class="left">Six left: 5, 6, 7, 9, 11, 12.</span></p>
+<h3>2. The invoice book</h3>
+<p>The shop never billed N.C.R. for it; the Navy paid direct. The book shows bills sent to N.C.R. for 4326 and 4334: strike lines 6 and 9. Invoice 1187, for 4329, is marked VOID. A void invoice is a bill that was never sent, so it strikes nothing.<span class="left">Four left: 5, 7, 11, 12.</span></p>
+<h3>3. The time book</h3>
+<p>Only men with Navy passes worked on it. Men with no pass booked hours to 4323 and 4343: strike lines 5 and 12.<span class="left">Two left: 7 and 11.</span></p>
+<h3>4. The stockroom book</h3>
+<p>It was wiring only: no bar or rod. Brass rod went to 4340: strike line 11.<span class="left">One left: line 7.</span></p>
+<p>&ldquo;Counter wheel assembly&rdquo; sounds like a machinist's job. The stockroom book says it drew nothing but wire and solder. That is what a cover name is for.</p>
+<p>If you ended with no lines, you struck 4329 for the VOID invoice. His father was a careful man with a pen.</p>
+<p><i>The Sugar Camp</i> opens in the same shop, two years later. We'll tell you when.</p>
+</template>
+
+<template id="cz-letter">
+<div class="lh"><b>LINDQVIST TOOL &amp; WIRE CO.</b>Dayton, Ohio</div>
+<p class="date">7 November 1975</p>
+<p>Dear {NAME},</p>
+<p>He came on Monday at nine. Commander Almquist himself, in a gray suit, not a uniform, with a young man to carry the boxes he didn't need. I had one folder on the bench: job 4329. He went through it sheet by sheet, standing up, for the best part of an hour. Then he signed for it, put it in his case, and asked me whether that was everything. I said it was. He looked at the drawing cabinets, forty years of them, and said, &ldquo;Then we won't trouble you further.&rdquo; Every other drawing in this building is where Dad left it.</p>
+<p>At the door he stopped. He said he couldn't tell me what the job was, and wouldn't be able to for a long time. Then he said, &ldquo;Your father's work mattered. More than he was ever allowed to know.&rdquo; And he went down the steps.</p>
+<p>Dad's Navy pass was in the folder, clipped inside the back cover. N-114. I don't think he ever meant anyone to find it. He rests in Woodland, up the hill from the Wright brothers. I took the pass up there on Sunday and left it on the stone, and stood there a while. It's the first time since March I've known what to say to him.</p>
+<p>One more thing, and I didn't mention it to the Commander. I went through that folder myself on Sunday night, before I handed it over. On sheet seven of the wiring list somebody had corrected the connections, in pencil, in a small, neat hand. It isn't Dad's. It isn't Rausch's or Timmer's either; I've read their writing on every job ticket in this shop for thirty years. Whoever it was, their name wasn't anywhere in that folder. And now the folder's in Washington.</p>
+<p>Work is slow. I don't know how long this shop has. If it comes to closing, I'll want you back to go through the rest of it.</p>
+<p>What I owe you is enclosed, with what the man in Alabama paid, and a little over.</p>
+<p class="sig"><span class="hand">Carl Lindqvist</span>Carl Lindqvist</p>
+</template>
+
+<section class="band" id="signup" aria-labelledby="sc-next">
+  <div class="wrap signup">
+    <div class="stack">
+      <p class="eyebrow">Case Three</p>
+      <h2 class="h2" id="sc-next">Hear when THE SUGAR CAMP opens</h2>
+      <p class="muted">Same shop, two years later. One letter when it's ready, nothing else.</p>
+    </div>
+    <form class="paper form-card" data-signup="sugarcamp-casezero" novalidate>
+      <div class="field">
+        <label for="sc-email">Email address</label>
+        <input id="sc-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="sc-website">Leave this empty</label><input id="sc-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Put me on the list</button>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

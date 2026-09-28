@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Only Conclusion</title>
+<meta name="description" content="Interactive mystery novels set in real moments of history. You're the investigator, the evidence is the paperwork, and the last name standing is the answer.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://theonlyconclusion.com/">
+<meta name="theme-color" content="#14110d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Only Conclusion">
+<meta property="og:title" content="The Only Conclusion">
+<meta property="og:description" content="Interactive mystery novels set in real moments of history. You're the investigator, the evidence is the paperwork, and the last name standing is the answer.">
+<meta property="og:url" content="https://theonlyconclusion.com/">
+<meta property="og:image" content="https://theonlyconclusion.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@500;600&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to the case</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="The Only Conclusion, home"><img src="assets/img/toc-logo.webp" alt="The Only Conclusion" width="720" height="267"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#how" class="opt">How it works</a>
+      <a href="index.html#cases">The cases</a>
+      <a href="index.html#case-zero">Case Zero</a>
+      <a href="index.html#sheets" class="opt">Free sheets</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">A series of interactive mystery novels</p>
+      <h1 id="hero-title" style="margin-top:14px">Every paper crosses someone out. <em>The last name standing is the answer.</em></h1>
+      <p class="lede">Real history, invented paperwork, one provable answer. You're the investigator, the evidence is the paperwork, and the answer is a person the record erased.</p>
+      <div class="btn-row">
+        <a class="btn" href="books-all-hands.html">Start with ALL HANDS</a>
+        <a class="btn ghost" href="#practice">Try a practice sheet</a>
+      </div>
+      <p class="hero-note">Case One, <i>ALL HANDS</i> (Lake Huron, 1913), is out now in paperback.</p>
+    </div>
+
+    <div class="paper sheet" id="practice" aria-label="Practice sheet, a two-minute sample case">
+      <div class="sheet-head">
+        <span class="type">PRACTICE SHEET</span>
+        <span class="hand" style="font-size:1.2rem;color:var(--ink-soft)">not from any book</span>
+      </div>
+      <p class="sheet-q">Six men were on the books at the freight depot on the night of 14&nbsp;March&nbsp;1911. One of them signed for a telegram at 2:10&nbsp;a.m. Strike every man the papers prove it wasn't. <span class="muted" style="color:var(--ink-soft)">Tap a line to strike it, or let a paper show you.</span></p>
+      <div style="overflow-x:auto">
+      <table class="ledger">
+        <thead><tr><th scope="col">LINE</th><th scope="col">NAME</th><th scope="col">JOB</th><th scope="col">SHIFT</th></tr></thead>
+        <tbody>
+          <tr class="row" data-line="1"><td>1</td><td class="name">A. Brenner<span class="ring"></span></td><td>Porter</td><td>Night</td></tr>
+          <tr class="row" data-line="2"><td>2</td><td class="name">C. Dwyer<span class="ring"></span></td><td>Clerk</td><td>Day</td></tr>
+          <tr class="row" data-line="3"><td>3</td><td class="name">E. Fisk<span class="ring"></span></td><td>Clerk</td><td>Night</td></tr>
+          <tr class="row" data-line="4"><td>4</td><td class="name">H. Moll<span class="ring"></span></td><td>Watchman</td><td>Night</td></tr>
+          <tr class="row" data-line="5"><td>5</td><td class="name">J. Ostrow<span class="ring"></span></td><td>Clerk</td><td>Night</td></tr>
+          <tr class="row" data-line="6"><td>6</td><td class="name">L. Pruitt<span class="ring"></span></td><td>Porter</td><td>Night</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="readout" aria-live="polite">
+        <span>Still standing: <b data-count>6</b></span>
+        <span>Lines add up to: <b data-sum>21</b></span>
+      </div>
+      <div class="docs">
+        <div class="doc"><h4>POSTED RULE</h4><p>Day men off at 6&nbsp;p.m. No day man on the floor after 7.</p><button class="show" type="button" data-strike="2">Show me</button></div>
+        <div class="doc"><h4>SICK BOOK &middot; 14 MAR</h4><p>E. Fisk: home, fever. No cover sent.</p><button class="show" type="button" data-strike="3">Show me</button></div>
+        <div class="doc"><h4>TELEGRAM, 2:10 A.M.</h4><p>Received and signed for by the clerk on duty.</p><button class="show" type="button" data-strike="1,4,6">Show me</button></div>
+      </div>
+      <div class="sheet-foot">
+        <p class="verdict" aria-live="polite"></p>
+        <button class="reset" type="button">Rub it out</button>
+      </div>
+      <p class="tip">In the books, you and the narrator keep separate counts and line-number sums. If they don't match, one of you has gone wrong.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How a case works</p>
+      <h2 class="h2" id="how-title">A story and a case file, bound into one book</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Take the job</h3><p>Someone who has run out of time sends for you. The opening letter says who's paying, and why it has to be an outsider.</p></li>
+      <li><h3>Read the paper</h3><p>Every chapter hands you a document that looks like the real thing: a payroll, a telegram, a pressing-plant manifest, a union contract.</p></li>
+      <li><h3>Strike the names</h3><p>Each paper proves some people on the master sheet can't be the one. Strike them in pencil, with a ruler.</p></li>
+      <li><h3>Check your count</h3><p>Compare your count and your line-number sum with the narrator's. When one line is left, you've reached the only conclusion.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="cases" aria-labelledby="cases-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The cases</p>
+      <h2 class="h2" id="cases-title">You are the investigator. Your reputation travels.</h2>
+      <p class="muted">You never get a name in the books. You write your own on the hiring slip. Every case stands on its own, and each client passes you on to the next.</p>
+    </div>
+    <div class="cases">
+      <article class="case">
+        <a class="cover-link" href="books-all-hands.html"><img class="cover" src="assets/img/cover-all-hands.webp" alt="ALL HANDS cover: a freighter in a storm on Lake Huron" width="700" height="1000" loading="lazy"></a>
+        <p class="num">Case One</p>
+        <h3>All Hands</h3>
+        <p class="where">Lake Huron, 1913</p>
+        <p class="hook">The worst storm in Great Lakes history takes a freighter with every man aboard. Twenty-six went out. Only twenty-five were ever named.</p>
+        <p><span class="status live">OUT NOW</span></p>
+        <div class="btn-row"><a class="btn" data-buy="allHands" href="https://www.amazon.com/dp/B0HL783M57?spcref=PRINT_LISTING&amp;linkCode=ll2&amp;tag=buyonemedia-20&amp;linkId=a9001ac5b73049665e1be4efd5e31b84&amp;language=en_US&amp;gaOptInStatus=true&amp;ref_=as_li_ss_tl">Buy on Amazon</a><a class="btn ghost" href="books-all-hands.html">Read more</a></div>
+      </article>
+      <article class="case">
+        <a class="cover-link" href="books-the-music-vault.html"><img class="cover" src="assets/img/cover-music-vault.webp" alt="THE MUSIC VAULT cover: a recording studio control room at night" width="700" height="1000" loading="lazy"></a>
+        <p class="num">Case Two</p>
+        <h3>The Music Vault</h3>
+        <p class="where">Muscle Shoals, 1969</p>
+        <p class="hook">The best track in the vault has no name on it. Somebody played the bass line of his life. Nobody wrote down his name.</p>
+        <p><span class="status soon">COMING NOVEMBER 17, 2026</span></p>
+        <div class="btn-row"><a class="btn ghost" href="books-the-music-vault.html">Read more</a></div>
+      </article>
+      <article class="case">
+        <div class="folder" role="img" aria-label="A closed case folder labelled The Sugar Camp, Dayton, 1943">
+          <div class="label">THE SUGAR CAMP<br>Dayton, Ohio &middot; 1943<br><span style="font-size:.8rem">Lindqvist Tool &amp; Wire Co.</span></div>
+          <span class="stampmark">IN PREPARATION</span>
+        </div>
+        <p class="num">Case Three</p>
+        <h3>The Sugar Camp</h3>
+        <p class="where">Dayton, 1943</p>
+        <p class="hook">A small Dayton tool shop did one job for the Navy in 1943 and wrote it up under a cover name. The shop is closing, and the Navy wants the names.</p>
+        <p><span class="status prep">IN PREPARATION</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="rules-title">
+  <div class="wrap promises">
+    <div class="section-head" style="margin:0">
+      <p class="eyebrow">The house rules</p>
+      <h2 class="h2" id="rules-title">What every case promises</h2>
+      <p class="muted">Each book is set in a real moment of history, told through paperwork built to look and read like the real thing. The rules don't change from book to book.</p>
+    </div>
+    <ul class="rules">
+      <li><b>No murder</b><span>Every case is about a person the record erased. Nobody is killed for a plot twist.</span></li>
+      <li><b>One provable answer</b><span>No guessing, no trick ending. Everything you need is on the page, and every step can be checked.</span></li>
+      <li><b>Real history</b><span>A real storm, a real music town, a real wartime secret. The people and papers are invented. The history isn't.</span></li>
+      <li><b>Hints in three tiers</b><span>A nudge, then the rule, then a shove. They're numbered out of order, so you can't read ahead by accident.</span></li>
+      <li><b>The proof, sealed</b><span>The complete solution waits at the back behind a sealed page, for when you've signed your last count.</span></li>
+      <li><b>A bonus case</b><span>Every book ends with Case Zero, a short case that opens the next story.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="case-zero" aria-labelledby="cz-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Case Zero</p>
+      <h2 class="h2" id="cz-title">Solved the short case? Check it here.</h2>
+      <p class="muted">Every book ends with Case Zero: one ledger, a handful of papers, about fifteen minutes. When you have one line left, bring it here. You'll get the full walkthrough, and a letter from the case with your name on it.</p>
+    </div>
+    <div class="envelopes">
+      <a class="envelope" href="musicvault-casezero.html">
+        <span class="from">PRINTED AT THE BACK OF ALL HANDS</span>
+        <span class="to">The Varnell Vault, 1969</span>
+        <p>Your reward: the letter of reference the Cleveland clerk wrote for you. It's how the next client finds you.</p>
+        <span class="url">theonlyconclusion.com/musicvault-casezero</span>
+      </a>
+      <a class="envelope" href="sugarcamp-casezero.html">
+        <span class="from">PRINTED AT THE BACK OF THE MUSIC VAULT</span>
+        <span class="to">The Sugar Camp, 1975</span>
+        <p>Your reward: Carl Lindqvist's reply, written the week the Navy came to collect.</p>
+        <span class="url">theonlyconclusion.com/sugarcamp-casezero</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="sheets" aria-labelledby="sheets-title">
+  <div class="wrap narrow">
+    <div class="section-head">
+      <p class="eyebrow">Free, no email</p>
+      <h2 class="h2" id="sheets-title">Need a fresh master sheet?</h2>
+      <p class="muted">Every book has a master sheet and a spare. If you've used both, or you're solving with a friend, print another. Letter size, black and white.</p>
+    </div>
+    <div class="dl">
+      <span class="ico" aria-hidden="true"></span>
+      <div><b>ALL HANDS: the master sheet</b><br><span class="muted small">64 lines &middot; PDF &middot; letter size</span></div>
+      <a class="btn" href="assets/downloads/all-hands-master-sheet.pdf" download>Download</a>
+    </div>
+    <p class="muted small" style="margin-top:14px">THE MUSIC VAULT's sheet goes up here when the book opens.</p>
+  </div>
+</section>
+
+<section aria-labelledby="faq-title">
+  <div class="wrap narrow">
+    <div class="section-head">
+      <p class="eyebrow">Questions</p>
+      <h2 class="h2" id="faq-title">Before you sit down at the desk</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need to be good at puzzles or history?</summary><div class="a"><p>No. The first stage of every book shows you exactly how to strike, line by line. After that, each chapter asks what the paper proves, and the hints at the back catch you if you stall.</p></div></details>
+      <details><summary>What do I need?</summary><div class="a"><p>A pencil, not a pen, and something with a straight edge. Everything else is in the book.</p></div></details>
+      <details><summary>Is it a novel or a puzzle book?</summary><div class="a"><p>Both. It reads like a short novel told in the second person, and every chapter hands you evidence to work. The story moves when you do.</p></div></details>
+      <details><summary>Do I have to read them in order?</summary><div class="a"><p>No. Each case stands on its own. Reading in order gives you a small bonus: the people you help in one book send for you in the next.</p></div></details>
+      <details><summary>Can two people solve it together?</summary><div class="a"><p>That's how it's built. Every stage is checked by two counts and two sums. One of you reads, one of you strikes, then you compare. It makes a good gift for a couple or a parent and grown child.</p></div></details>
+      <details><summary>Is there violence?</summary><div class="a"><p>No murder, ever. ALL HANDS is set around a real shipwreck, and it treats the men who were lost with care.</p></div></details>
+      <details><summary>I'm stuck. What now?</summary><div class="a"><p>Turn to STUCK? at the back. Each stage has three hints: a nudge, the rule, and a shove. If you're still stuck, the full proof is sealed behind the last pages.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="signup" aria-labelledby="signup-title">
+  <div class="wrap signup">
+    <div class="stack">
+      <p class="eyebrow">The mailing list</p>
+      <h2 class="h2" id="signup-title">One letter when the next case opens</h2>
+      <p class="muted">THE MUSIC VAULT is next, releasing on November 17, 2026. Leave your address and we'll write once when it's ready. Nothing else, and we never share your address.</p>
+    </div>
+    <form class="paper form-card" data-signup="news" novalidate>
+      <p class="slip-title type">SEND WORD TO:</p>
+      <div class="field">
+        <label for="news-email">Email address</label>
+        <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="news-website">Leave this empty</label><input id="news-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Put me on the list</button>
+      <p class="form-msg" aria-live="polite"></p>
+      <p class="fine">See <a href="privacy.html" style="color:var(--ink)">privacy</a>. Unsubscribe from any email.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="about">
+      <a class="bf-link" href="https://brainfocusbooks.com" target="_blank" rel="noopener" aria-label="Brain Focus Books"><img class="bf" src="assets/img/brain-focus-light.png" alt="Brain Focus" width="560" height="71"></a>
+      <p>THE ONLY CONCLUSION is a series of interactive mystery novels from <a href="https://brainfocusbooks.com" target="_blank" rel="noopener">Brain Focus</a>, published by <a href="https://buyonemedia.com" target="_blank" rel="noopener">Buy One Media</a> in Dayton, Ohio.</p>
+      <p class="small" style="margin-top:10px">No murder. Real history, invented paperwork, one answer.</p>
+      <p class="small" style="margin-top:10px">As an Amazon Associate we earn from qualifying purchases.</p>
+    </div>
+    <div>
+      <h4>The cases</h4>
+      <ul>
+        <li><a href="books-all-hands.html">Case One: ALL HANDS</a></li>
+        <li><a href="books-the-music-vault.html">Case Two: THE MUSIC VAULT</a></li>
+        <li><a href="index.html#case-zero">Case Zero answers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>The office</h4>
+      <ul>
+        <li><a href="index.html#sheets">Free master sheets</a></li>
+        <li><a href="index.html#signup">The mailing list</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+      <p class="small" style="margin-top:14px">&copy; <span data-year>2026</span> <a href="https://buyonemedia.com" target="_blank" rel="noopener">Buy One Media</a></p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
