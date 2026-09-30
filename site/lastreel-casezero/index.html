@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Case Zero: The Last Reel</title>
+<meta name="description" content="Check your answer to Case Zero from the back of THE SUGAR CAMP, get the full walkthrough, and read Mrs. Garrity's note.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://theonlyconclusion.com/lastreel-casezero/">
+<meta name="theme-color" content="#14110d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Only Conclusion">
+<meta property="og:title" content="Case Zero: The Last Reel">
+<meta property="og:description" content="Check your answer to Case Zero from the back of THE SUGAR CAMP, get the full walkthrough, and read Mrs. Garrity's note.">
+<meta property="og:url" content="https://theonlyconclusion.com/lastreel-casezero/">
+<meta property="og:image" content="https://theonlyconclusion.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Oswald:wght@500;600&family=Special+Elite&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to the case</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="The Only Conclusion, home"><img src="../assets/img/toc-logo.webp" alt="The Only Conclusion" width="720" height="267"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../#how" class="opt">How it works</a>
+      <a href="../#cases">The cases</a>
+      <a href="../#case-zero">Case Zero</a>
+      <a href="../#sheets" class="opt">Free sheets</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="cz-hero">
+  <div class="wrap narrow stack">
+    <p class="eyebrow">Case Zero &middot; printed at the back of THE SUGAR CAMP</p>
+    <h1 class="display" style="font-size:clamp(2.2rem,1.4rem + 3vw,3.8rem)">The Halcyon Vault, January 1979</h1>
+    <p class="lede muted">Mrs. Garrity put the can on a shelf, under its own name. Then she wrote to you. Tell us the name the Commander wrote to and we'll send her note, along with the answer.</p>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="wrap cz-grid">
+    <div class="prose stack">
+      <p>Write the name you put on the Commander's letter, after &ldquo;Dear.&rdquo; Mrs. Garrity's note is typed out to that name, and a copy comes to your inbox.</p>
+      <p>Your line number is optional. Put it in and we'll tell you whether you found the can, or where it turned.</p>
+      <p class="muted small">Haven't solved it yet? Case Zero is at the back of <a href="../books/the-sugar-camp/">THE SUGAR CAMP</a>: twelve cans, four papers, about fifteen minutes. Come back when you have one line left.</p>
+    </div>
+    <form class="paper form-card" id="cz-form" novalidate>
+      <p class="slip-title type">HALCYON PICTURES &middot; FILM VAULT &middot; CULVER CITY</p>
+      <div class="field">
+        <label for="cz-name">Your name, as the Commander wrote it</label>
+        <input id="cz-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="cz-email">Email address</label>
+        <input id="cz-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="field">
+        <label for="cz-line">The line you have left (optional)</label>
+        <input id="cz-line" name="line" type="text" inputmode="numeric" placeholder="Line __" maxlength="4">
+      </div>
+      <div class="hp" aria-hidden="true"><label for="cz-website">Leave this empty</label><input id="cz-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Check my answer</button>
+      <p class="form-msg" aria-live="polite"></p>
+      <p class="fine">You'll also get one letter when THE LAST REEL opens. Unsubscribe any time.</p>
+    </form>
+  </div>
+</section>
+
+<section id="cz-result" class="result" hidden aria-live="polite" style="padding-top:0">
+  <div class="wrap" style="display:grid;gap:clamp(28px,4vw,48px)">
+    <p class="verdict-big" id="cz-verdict"></p>
+    <div class="walk" id="cz-walk"></div>
+    <div>
+      <p class="eyebrow" style="margin-bottom:14px">Mrs. Garrity's note</p>
+      <div class="paper letter" id="cz-letter"></div>
+    </div>
+    <div class="print-row no-print">
+      <button class="btn ghost" type="button" id="cz-print">Print the note</button>
+      <a class="btn" href="../#signup">Hear when THE LAST REEL opens</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="band" id="signup" aria-labelledby="lr-next">
+  <div class="wrap signup">
+    <div class="stack">
+      <p class="eyebrow">Case Four</p>
+      <h2 class="h2" id="lr-next">Hear when THE LAST REEL opens</h2>
+      <p class="muted">Same vault, same winter. One letter when it's ready, nothing else.</p>
+    </div>
+    <form class="paper form-card" data-signup="lastreel-casezero" novalidate>
+      <div class="field">
+        <label for="lr-email">Email address</label>
+        <input id="lr-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="lr-website">Leave this empty</label><input id="lr-website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn" type="submit">Put me on the list</button>
+      <p class="form-msg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+<script>window.CZ={"answer": 9, "label": "Line 9", "list": "lastreel-casezero", "walk": "PHAgY2xhc3M9ImFuc3dlci1saW5lIj48Yj5MaW5lIDk6IGNhbiBDLTMzNiwgPGk+TmlnaHQgRGVzazwvaT4sIHJlZWwgNyAoMTk0NykuPC9iPjwvcD4KPGgzPjEuIFRoZSBjYW4gb24gaGVyIGJlbmNoPC9oMz4KPHA+MzUtbWlsbGltZXRlciBmaWxtLCBjb2RlZCAxOTQ3LiBTdHJpa2UgdGhlIDE5NDYgcGljdHVyZXMgKGxpbmVzIDEgdG8gNCkgYW5kIHRoZSAxNiZuYnNwO21tIHJlZWwgKGxpbmUgMTApLjxzcGFuIGNsYXNzPSJsZWZ0Ij5TZXZlbiBsZWZ0OiA1LCA2LCA3LCA4LCA5LCAxMSwgMTIuPC9zcGFuPjwvcD4KPGgzPjIuIFRoZSBsYWIncyByZXR1cm4gc2hlZXQ8L2gzPgo8cD5GaXZlIGNhbnMgY2FtZSBiYWNrIGxhYmVsZWQgYW5kIHdlbnQgb24gdGhlIHNoZWxmLiBUaHJlZSBvZiB5b3VycyBhcmUgYW1vbmcgdGhlbTogbGluZXMgNSwgOCBhbmQgMTIuPHNwYW4gY2xhc3M9ImxlZnQiPkZvdXIgbGVmdDogNiwgNywgOSwgMTEuPC9zcGFuPjwvcD4KPGgzPjMuIFRoZSBjdXR0aW5nIGNvbnRpbnVpdHk8L2gzPgo8cD4zNSZuYnNwO21tIHJ1bnMgOTAgZmVldCBhIG1pbnV0ZSwgc28gOTQ1IGZlZXQgcnVucyAxMCBtaW51dGVzIDMwIHNlY29uZHMuIE9ubHkgPGk+U3Vuc2V0IExpbWl0ZWQ8L2k+IHJlZWwgNiBhbmQgPGk+TmlnaHQgRGVzazwvaT4gcmVlbCA3IHdlcmUgY3V0IHRvIHRoYXQgbGVuZ3RoOiBzdHJpa2UgbGluZXMgNiBhbmQgMTEuPHNwYW4gY2xhc3M9ImxlZnQiPlR3byBsZWZ0OiA3IGFuZCA5Ljwvc3Bhbj48L3A+CjxoMz40LiBUaGUgZmlyZSBtYXJzaGFsJ3MgbGlzdDwvaDM+CjxwPkhlIGNvbmRlbW5lZCBhbmQgZGVzdHJveWVkIEMtMzI1IGluIDE5Nzc6IHN0cmlrZSBsaW5lIDcuIEMtMzM2IGhlIGluc3BlY3RlZCBhbmQgZm91bmQgc291bmQuPHNwYW4gY2xhc3M9ImxlZnQiPk9uZSBsZWZ0OiBsaW5lIDkuPC9zcGFuPjwvcD4KPHA+SWYgeW91IGVuZGVkIHdpdGggbm8gY2FucywgeW91IHN0cnVjayBldmVyeSBjYW4gb24gdGhlIG1hcnNoYWwncyBsaXN0LiBJbnNwZWN0ZWQgaXMgbm90IGRlc3Ryb3llZC48L3A+CjxwPjxpPlRoZSBMYXN0IFJlZWw8L2k+IG9wZW5zIGluIHRoZSBzYW1lIHZhdWx0LiBXZSdsbCB0ZWxsIHlvdSB3aGVuLjwvcD4=", "letter": "PGRpdiBjbGFzcz0ibGgiPjxiPkhBTENZT04gUElDVFVSRVMgQ09SUE9SQVRJT048L2I+RmlsbSBWYXVsdCAmbWlkZG90OyBDdWx2ZXIgQ2l0eSwgQ2FsaWZvcm5pYTwvZGl2Pgo8cCBjbGFzcz0iZGF0ZSI+RnJpZGF5LCAyNiBKYW51YXJ5IDE5Nzk8L3A+CjxwPkRlYXIge05BTUV9LDwvcD4KPHA+Qy0zMzYgaXMgb24gdGhlIHNoZWxmLCB1bmRlciBpdHMgb3duIG5hbWUsIHdoaWNoIGlzIHdoZXJlIGl0IGJlbG9uZ3MuIFRoZSBDb21tYW5kZXIgc2FpZCB5b3Ugd291bGQgZmluZCBpdC4gSGUgd2FzIHJpZ2h0LCBhbmQgSSBoYXZlIHRvbGQgaGltIHNvLCB3aGljaCBoZSBlbmpveWVkIG1vcmUgdGhhbiBhIG1hbiBoaXMgYWdlIHNob3VsZC48L3A+CjxwPkkgZGlkIG9uZSBtb3JlIHRoaW5nIGJlZm9yZSBJIHB1dCBpdCBhd2F5LiBUaGlydHkgeWVhcnMgYXQgYSBjdXR0aW5nIGJlbmNoLCBhbmQgeW91IGNhbid0IHNoZWx2ZSBhIHJlZWwgeW91IGhhdmVuJ3QgbG9va2VkIGF0LiBMYXN0IG5pZ2h0LCBhZnRlciB0aGUgYnVpbGRpbmcgZW1wdGllZCwgSSBsYWNlZCByZWVsIDcgb2YgPGk+TmlnaHQgRGVzazwvaT4gb24gdGhlIE1vdmlvbGEgYW5kIHJhbiBpdCB0aHJvdWdoLjwvcD4KPHA+TmluZSBodW5kcmVkIGFuZCBmb3J0eS1maXZlIGZlZXQsIGxpa2UgdGhlIGNvbnRpbnVpdHkgc2F5cy4gVGVuIGFuZCBhIGhhbGYgbWludXRlcy4gVGhlIGxhc3QgdGhyZWUgYXJlIHRoZSBiZXN0IHRoaW5nIGluIHRoZSBwaWN0dXJlLCBhbmQgSSBoYXZlIGN1dCBhIGdyZWF0IG1hbnkgcGljdHVyZXMuPC9wPgo8cD5UaGV5IGFyZSBub3QgaW4gdGhlIHNjcmlwdC4gSSBwdWxsZWQgdGhlIHNob290aW5nIHNjcmlwdCBmcm9tIHRoZSBmaWxlcyB0aGlzIG1vcm5pbmcsIGFuZCB0aGUgZGlhbG9ndWUgc2hlZXRzLCBhbmQgdGhlIGNyZWRpdHMgdGhlIHN0dWRpbyBzZW50IHRoZSB0cmFkZSBwYXBlcnMgaW4gMTk0Ny4gVGhhdCBzY2VuZSBpc24ndCBpbiBhbnkgb2YgdGhlbS4gU29tZWJvZHkgd3JvdGUgaXQsIHNvbWVib2R5IHNob3QgaXQsIGFuZCBzb21lYm9keSBjdXQgaXQgaW4sIGFuZCB0aGUgcGFwZXIgZG9lc24ndCBrbm93IGl0IGhhcHBlbmVkLjwvcD4KPHA+SSBoYXZlIHNwZW50IG15IHdvcmtpbmcgbGlmZSBtYWtpbmcgY3V0cyBub2JvZHkgc2Vlcy4gSSBrbm93IHdoYXQgaXQgbG9va3MgbGlrZSB3aGVuIHNvbWVvbmUncyB3b3JrIGlzIGxlZnQgb24gdGhlIGZsb29yLjwvcD4KPHA+VGhlIHN0dWRpbyBkb2Vzbid0IHBheSBtZSB0byB3b25kZXIgYWJvdXQgdGhpcy4gSSBhbSBnb2luZyB0byB3b25kZXIgYW55d2F5LiBXaGVuIEkgaGF2ZSB0aGUgcGFwZXJzIHRvZ2V0aGVyLCBJJ2xsIHNlbmQgZm9yIHlvdS4gVGhlIENvbW1hbmRlciBzYXlzIHlvdSBkb24ndCBsZXQgZ28gb2YgYSB0aGluZy4gTmVpdGhlciBkbyBJLjwvcD4KPHA+WW91ciBmZWUgaXMgZW5jbG9zZWQuIFRoZSBDb21tYW5kZXIgdHJpZWQgdG8gcGF5IGl0LiBJIHdvdWxkbid0IGxldCBoaW0uPC9wPgo8cCBjbGFzcz0ic2lnIj48c3BhbiBjbGFzcz0iaGFuZCI+R2Fycml0eTwvc3Bhbj5NcnMuIEdhcnJpdHksIEZpbG0gVmF1bHQ8L3A+"};</script>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="about">
+      <a class="bf-link" href="https://brainfocusbooks.com" target="_blank" rel="noopener" aria-label="Brain Focus Books"><img class="bf" src="../assets/img/brain-focus-light.png" alt="Brain Focus" width="560" height="71"></a>
+      <p>THE ONLY CONCLUSION is a series of interactive mystery novels from <a href="https://brainfocusbooks.com" target="_blank" rel="noopener">Brain Focus</a>, published by <a href="https://buyonemedia.com" target="_blank" rel="noopener">Buy One Media</a> in Dayton, Ohio.</p>
+      <p class="small" style="margin-top:10px">No murder. Real history, invented paperwork, one answer.</p>
+      <p class="small" style="margin-top:10px">As an Amazon Associate we earn from qualifying purchases.</p>
+    </div>
+    <div>
+      <h4>The cases</h4>
+      <ul>
+        <li><a href="../books/all-hands/">Case One: ALL HANDS</a></li>
+        <li><a href="../books/the-music-vault/">Case Two: THE MUSIC VAULT</a></li>
+        <li><a href="../books/the-sugar-camp/">Case Three: THE SUGAR CAMP</a></li>
+        <li><a href="../#case-zero">Case Zero answers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>The office</h4>
+      <ul>
+        <li><a href="../#sheets">Free master sheets</a></li>
+        <li><a href="../#signup">The mailing list</a></li>
+        <li><a href="../privacy/">Privacy</a></li>
+      </ul>
+      <p class="small" style="margin-top:14px">&copy; <span data-year>2026</span> <a href="https://buyonemedia.com" target="_blank" rel="noopener">Buy One Media</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/site.js"></script>
+</body>
+</html>

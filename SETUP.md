@@ -14,15 +14,19 @@ Folder: `The Only Conclusion\WEBSITE\`
 | `/` | Home: practice sheet you can play, how it works, the cases, Case Zero, free master sheet, FAQ, mailing list | QR / ONLINE page in both books |
 | `/books/all-hands/` | ALL HANDS page with buy button | |
 | `/books/the-music-vault/` | THE MUSIC VAULT page, "coming soon" + sign-up | |
+| `/books/the-sugar-camp/` | THE SUGAR CAMP page, "coming soon" + sign-up + free sheet | |
 | `/musicvault-casezero/` | Case Zero answer + Cleveland letter of reference with the reader's name | back of ALL HANDS |
 | `/sugarcamp-casezero/` | Case Zero answer + Carl's reply with the reader's name | back of THE MUSIC VAULT |
+| `/lastreel-casezero/` | Case Zero answer + Mrs. Garrity's note with the reader's name | back of THE SUGAR CAMP |
 | `/review/` | Sends people to the Amazon review page | tester packet QR cards |
 | `/privacy/` | Privacy page (needed for email sign-ups) | |
 | `/assets/downloads/all-hands-master-sheet.pdf` | Free master sheet, no email | ALL HANDS ONLINE page |
+| `/assets/downloads/music-vault-master-sheet.pdf` | Free master sheet, no email | THE MUSIC VAULT ONLINE page |
+| `/assets/downloads/sugar-camp-master-sheet.pdf` | Free master sheet, no email | THE SUGAR CAMP, BEFORE YOU BEGIN |
 
 The Case Zero answers are hidden in the page code (encoded) and only appear after the reader fills in the form. The reader's name is typed into the letter on screen, and there's a Print button.
 
-Short links that also work (in `site\_redirects`): `/allhands`, `/musicvault`, `/casezero`, `/sheets`, and capitalised or hyphenated versions of the Case Zero addresses, so a reader who types it slightly wrong still lands.
+Short links that also work (in `site\_redirects`): `/allhands`, `/musicvault`, `/sugarcamp`, `/casezero`, `/sheets`, `/nitrateroom-casezero` (old title), and capitalised or hyphenated versions of the Case Zero addresses, so a reader who types it slightly wrong still lands.
 
 ## Step 1 — Before launch: the settings (config.js)
 
@@ -35,18 +39,19 @@ Short links that also work (in `site\_redirects`): `/allhands`, `/musicvault`, `
 
 Recommended: **MailerLite** (it has a free plan, forms, groups and automations; check their current limits). Kit (ConvertKit) works too: set `provider: "kit"` in config.js.
 
-Make **three groups**, one per list:
+Make **four groups**, one per list:
 
 | Group | Filled by | Its welcome email sends |
 |---|---|---|
 | `TOC news` | home + book page sign-ups | a one-line thank-you (optional) |
 | `Case Zero – Music Vault` | `/musicvault-casezero` | the Cleveland letter of reference, with the reader's name |
 | `Case Zero – Sugar Camp` | `/sugarcamp-casezero` | Carl's reply, with the reader's name |
+| `Case Zero – Last Reel` | `/lastreel-casezero` | Mrs. Garrity's note, with the reader's name |
 
 For each group:
 1. Forms → Embedded form → attach it to that group. Fields: Email, and Name (for the two Case Zero groups).
 2. Open the form's HTML code and copy the address in `<form action="...">`.
-3. Paste it into config.js under the matching list (`news`, `musicvault-casezero`, `sugarcamp-casezero`).
+3. Paste it into config.js under the matching list (`news`, `musicvault-casezero`, `sugarcamp-casezero`, `lastreel-casezero`).
 4. Automations → "When subscriber joins group" → send the email below. In MailerLite the name goes in as `{$name}`; in Kit as `{{ subscriber.first_name }}`.
 5. Test it: fill in the form on the live site with your own address and check the email arrives.
 
@@ -78,13 +83,26 @@ If a list address is left empty, that form still works on the page (the reader s
 >
 > — The Only Conclusion
 
+### Email: Case Zero – Last Reel
+**Subject:** A note from the vault
+
+> {$name},
+>
+> Mrs. Garrity put the can on the shelf. Then she ran the reel. Here's her note.
+>
+> [paste Mrs. Garrity's note from `00 SERIES\WEBSITE - launch copy.md`, replacing {NAME} with {$name}]
+>
+> THE LAST REEL opens in the same vault. We'll write once when it's ready.
+>
+> — The Only Conclusion
+
 ## Step 3 — Server Deployment (Hetzner)
 
 The site is deployed on the Hetzner server (`5.78.107.55`) in `/var/www/theonlyconclusion.com`.
 
 - **Web Server:** Nginx (`nginx:alpine`) running via Docker Compose (`theonlyconclusion-web`), routed through Traefik (`coolify-proxy`) on the `coolify` Docker network.
 - **DNS / SSL:** Cloudflare proxies `theonlyconclusion.com` and `www.theonlyconclusion.com` to Hetzner (`5.78.107.55`). Traefik terminates SSL and handles HTTPS redirection.
-- **Redirects:** All short links (`/allhands`, `/musicvault`, `/casezero`, `/sheets`, etc.) and canonical www-to-apex redirection are defined in [nginx.conf](file:///d:/Documents/Business/Books/Brain%20Focus/The%20Only%20Conclusion/WEBSITE/nginx.conf).
+- **Redirects:** All short links (`/allhands`, `/musicvault`, `/sugarcamp`, `/casezero`, `/sheets`, `/nitrateroom-casezero` (old title), etc.) and canonical www-to-apex redirection are defined in [nginx.conf](file:///d:/Documents/Business/Books/Brain%20Focus/The%20Only%20Conclusion/WEBSITE/nginx.conf).
 - **Updating the live site:**
   1. Edit words in `src/` or settings in `site/assets/js/config.js`.
   2. Run `python build.py`.
@@ -96,11 +114,13 @@ The site is deployed on the Hetzner server (`5.78.107.55`) in `/var/www/theonlyc
 - [x] ALL HANDS is Live; Associates link and review link in config.js.
 - [ ] All three email forms connected and tested with your own address.
 - [ ] Scan the QR code from a **printed** proof, not the screen.
-- [ ] Type the two Case Zero addresses exactly as printed in the books and check they open.
+- [ ] Type the three Case Zero addresses exactly as printed in the books and check they open.
 - [ ] Download the master sheet from your phone.
 
 ## Later
 
-- **When THE MUSIC VAULT is live:** set `musicVault` in config.js, change its status from COMING SOON to OUT NOW in `src\pages\index.html` and `book-music-vault.html`, and add its master sheet next to ALL HANDS's (Free sheets section).
-- **When THE SUGAR CAMP prints:** build `/nitrateroom-casezero` by copying `src\pages\cz-sugarcamp.html` (the walkthrough is in the launch copy; Mrs. Garrity's note still needs writing).
+- **When THE MUSIC VAULT is live:** set `musicVault` in config.js, change its status from COMING SOON to OUT NOW in `src\pages\index.html` and `book-music-vault.html`.
+- **When THE SUGAR CAMP is live:** set `sugarCamp` in config.js (buy buttons appear by themselves) and change COMING SOON to OUT NOW in `src\pages\index.html` and `book-sugar-camp.html`. `/lastreel-casezero` is DONE (30 Sep).
+- **THE MUSIC VAULT master sheet:** already up (30 Sep).
+- **Master sheets:** after any rebuild of a book's retail layout, re-extract its master sheet pages into `site\assets\downloads\`.
 - **Hints by email:** the site doesn't offer it. THE MUSIC VAULT's last page now says "Print a fresh master sheet" instead, so the book doesn't promise it.

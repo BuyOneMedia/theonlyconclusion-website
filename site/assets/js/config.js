@@ -10,6 +10,7 @@ window.TOC_CONFIG = {
   amazon: {
     allHands: "https://www.amazon.com/dp/B0HL783M57?spcref=PRINT_LISTING&linkCode=ll2&tag=buyonemedia-20&linkId=a9001ac5b73049665e1be4efd5e31b84&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl",   // Amazon Associates link (tag buyonemedia-20)
     musicVault: "",         // leave empty until THE MUSIC VAULT is live; the page shows "Coming soon"
+    sugarCamp: "",          // leave empty until THE SUGAR CAMP is live; its buy buttons stay hidden
 
     /* Where theonlyconclusion.com/review sends people (the QR review cards in the tester packet).
        Once ALL HANDS has its ASIN, use: "https://www.amazon.com/review/create-review?asin=B0XXXXXXXX" */
@@ -31,7 +32,9 @@ window.TOC_CONFIG = {
       // /musicvault-casezero (printed in ALL HANDS) — sends the Cleveland letter of reference
       "musicvault-casezero":{ action: "" },
       // /sugarcamp-casezero (printed in THE MUSIC VAULT) — sends Carl's reply; pre-order list for THE SUGAR CAMP
-      "sugarcamp-casezero": { action: "" }
+      "sugarcamp-casezero": { action: "" },
+      // /lastreel-casezero (printed in THE SUGAR CAMP) — sends Mrs. Garrity's note; pre-order list for THE LAST REEL
+      "lastreel-casezero":  { action: "" }
     }
   }
 };
